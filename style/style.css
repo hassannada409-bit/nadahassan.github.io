@@ -4,7 +4,6 @@ body{
     background-color:#fff0f5;
 }
 
-
 header{
     background:#333;
     color:white;
@@ -14,7 +13,6 @@ header{
     top:0;
     z-index:1000;
 }
-
 
 nav{
     background:#555;
@@ -35,9 +33,41 @@ nav a:hover{
     transform:scale(1.1);
 }
 
-
 main{
     padding:20px;
+}
+
+/* ===== تنسيق الفورم ===== */
+form{
+    background:white;
+    padding:20px;
+    width:300px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+form label{
+    display:block;
+    margin-bottom:3px;
+    color:#5a5a5a;
+    font-size:14px;
+}
+
+form input,
+form textarea{
+    display:block;
+    width:100%;
+    padding:6px;
+    margin-bottom:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    outline:none;
+}
+
+form input:focus,
+form textarea:focus{
+    border-color:#ffb6c1;
 }
 
 
@@ -69,7 +99,6 @@ th, td{
     color: #e88ab6;
 }
 
-
 .status{
     padding: 6px 14px;
     border-radius: 20px;
@@ -80,7 +109,6 @@ th, td{
 .active { background-color: #ffd6e7; color: #c94f8a; }
 .completed { background-color: #ffe4ef; color: #b63b7a; }
 .upcoming { background-color: #fff0f6; color: #d96aa4; }
-
 
 tbody tr:hover{
     background-color: #eccbe5;
@@ -102,7 +130,6 @@ button:hover{
     transform:scale(1.05);
 }
 
-
 footer{
     background:#333;
     color:white;
@@ -111,11 +138,16 @@ footer{
     margin-top:20px;  
 }
 
+
 @media (max-width: 768px){
 
     nav a{
         display:block;
         margin:10px 0;
+    }
+
+    form{
+        width:100%;
     }
 
     table, thead, tbody, th, td, tr{
