@@ -1,15 +1,20 @@
 body{
-    font-family: Arial;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin:0;
-    background-color:#f4f4f4;
+    background-color:#fff0f5;
 }
+
 
 header{
     background:#333;
     color:white;
     padding:15px;
     text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
+
 
 nav{
     background:#555;
@@ -22,51 +27,125 @@ nav a{
     text-decoration:none;
     margin:15px;
     font-size:18px;
+    transition:0.3s;
 }
 
 nav a:hover{
-    color:yellow;
+    color:#ffb6c1;
+    transform:scale(1.1);
 }
+
 
 main{
     padding:20px;
 }
 
+
 table{
     width:100%;
-    border-collapse:collapse;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-table,th,td{
-    border:1px solid black;
+thead{
+    background-color: #ffc0cb;
+    color: #6e6e6e;
+    text-align: left;
 }
 
-th,td{
-    padding:10px;
-    text-align:center;
+th, td{
+    padding: 20px 15px;
+    border-bottom: 1px solid #f0f2f5;
+    font-size: 14px;
+    color: #6e6e6e;
 }
 
-form input, form textarea{
-    width:100%;
-    padding:8px;
-    margin:8px 0;
+.course-name{
+    font-weight: 600;
+    color: #e88ab6;
 }
+
+
+.status{
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.active { background-color: #ffd6e7; color: #c94f8a; }
+.completed { background-color: #ffe4ef; color: #b63b7a; }
+.upcoming { background-color: #fff0f6; color: #d96aa4; }
+
+
+tbody tr:hover{
+    background-color: #eccbe5;
+}
+
 
 button{
     padding:10px;
-    background:#333;
-    color:white;
+    background:#ffb6c1;
+    color:#5a5a5a;
     border:none;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
 }
 
 button:hover{
-    background:black;
+    background:#ff8fb1;
+    transform:scale(1.05);
 }
+
 
 footer{
     background:#333;
     color:white;
     text-align:center;
-    padding:10px;
-    margin-top:20px;
+    padding:15px;
+    margin-top:20px;  
+}
+
+@media (max-width: 768px){
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    table, thead, tbody, th, td, tr{
+        display:block;
+        width:100%;
+    }
+
+    thead{
+        display:none;
+    }
+
+    tr{
+        margin-bottom:15px;
+        background:white;
+        padding:10px;
+        border-radius:10px;
+        box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    td{
+        padding:10px;
+        text-align:left;
+        position:relative;
+    }
+
+    td::before{
+        content: attr(data-label);
+        font-weight:bold;
+        display:block;
+        margin-bottom:5px;
+        color:#e88ab6;
+    }
 }
