@@ -37,7 +37,6 @@ main{
     padding:20px;
 }
 
-/* ===== تنسيق الفورم ===== */
 form{
     background:white;
     padding:20px;
@@ -141,7 +140,6 @@ footer{
 
 @media (max-width: 768px){
 
-    
     body{
         padding:10px;
     }
@@ -151,7 +149,6 @@ footer{
         text-align:center;
     }
 
-    
     nav{
         display:flex;
         flex-direction:column;
@@ -163,16 +160,9 @@ footer{
         margin:10px 0;
     }
 
-    
     form{
         width:100%;
         padding:15px;
-    }
-
-    label{
-        font-size:14px;
-        display:block;
-        margin-bottom:5px;
     }
 
     input, textarea{
@@ -189,7 +179,6 @@ footer{
         resize:vertical;
     }
 
-    
     table, thead, tbody, th, td, tr{
         display:block;
         width:100%;
@@ -226,7 +215,6 @@ footer{
         color:#e88ab6;
     }
 
-    
     button{
         width:100%;
         margin-top:10px;
@@ -235,7 +223,6 @@ footer{
         border-radius:6px;
     }
 
-    
     .contact-info{
         display:flex;
         flex-direction:column;
